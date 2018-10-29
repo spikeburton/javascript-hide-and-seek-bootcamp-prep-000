@@ -19,10 +19,8 @@ function deepestChild() {
   var next = cur.children[0];
 
   while(next) {
-    if(!cur.hasChildNodes()) {
-      return cur;
-    }
-
+    cur = next;
+    next = cur.children[0];
   }
   return cur;
 }
